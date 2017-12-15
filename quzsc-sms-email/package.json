@@ -1,6 +1,6 @@
 {
   "name": "quzsc-sms-email",
-  "version": "0.1.1",
+  "version": "0.1.5",
   "private": false,
   "bin": {
     "quzsc_sms_email": "./quzsc_sms_email_cli.js"

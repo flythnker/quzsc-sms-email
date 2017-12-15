@@ -11,18 +11,19 @@ function help()
     console.info("欢迎使用 quzsc-sms-email");
     console.info("使用提示:");
     console.info("发送邮件");
-    console.info("    quzsc_sms_email aaa@dd.com email 标题 html内容");
+    console.info("    quzsc_sms_email aaa@dd.com 标题 html内容");
 }
 
 function main(){
     var argArr = process.argv.slice(2);
+    console.info("argArr.length:" + argArr.length );
     if(argArr.length == 0){
         help()
-    }else if(argArr.length == 4){
+    }else if(argArr.length == 3){
         const EmailService = require("./lib/email_service");
         var emailService = new EmailService();
-        emailService.init(__dirname);
-        emailService.发送(argArr[0],argArr[1],argArr[2],argArr[3]);
+        emailService.init(process.cwd() );
+        emailService.发送(argArr[0],argArr[1],argArr[2]);
     }else{
         console.info("参数错误");
         console.info(JSON.stringify(argArr));

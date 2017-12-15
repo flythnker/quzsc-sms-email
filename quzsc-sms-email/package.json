@@ -1,0 +1,27 @@
+{
+  "name": "quzsc-sms-email",
+  "version": "0.1.1",
+  "private": false,
+  "bin": {
+    "quzsc_sms_email": "./quzsc_sms_email_cli.js"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "commander": "^2.12.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "~2.5.7",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "nodemailer": "^4.4.1",
+    "quzsc-web-base": "^0.1.5",
+    "serve-favicon": "~2.4.5"
+  },
+  "description": "趣智思成 发送短消息，发送电子邮件组件。",
+  "repository": "https://github.com/flythnker/quzsc-sms-email",
+  "license": "MIT"
+}
